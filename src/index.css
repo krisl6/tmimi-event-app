@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Primary Colors */
+  --color-primary: 59 130 246;
+  --color-primary-hover: 37 99 235;
+  
+  /* Neutral Colors */
+  --color-background: 255 255 255;
+  --color-surface: 249 250 251;
+  --color-border: 229 231 235;
+  
+  /* Text Colors */
+  --color-text-primary: 17 24 39;
+  --color-text-secondary: 55 65 81;
+  --color-text-muted: 107 114 128;
+  
+  /* Status Colors */
+  --color-success: 34 197 94;
+  --color-error: 239 68 68;
+  --color-warning: 251 146 60;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1);
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-text-primary font-body antialiased;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    @apply font-semibold;
+  }
+}
+
+@layer utilities {
+  .bg-background {
+    background-color: rgb(var(--color-background));
+  }
+  
+  .bg-surface {
+    background-color: rgb(var(--color-surface));
+  }
+  
+  .text-text-primary {
+    color: rgb(var(--color-text-primary));
+  }
+  
+  .text-text-secondary {
+    color: rgb(var(--color-text-secondary));
+  }
+  
+  .text-text-muted {
+    color: rgb(var(--color-text-muted));
+  }
+  
+  .border-border {
+    border-color: rgb(var(--color-border));
+  }
+  
+  .font-body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+}
